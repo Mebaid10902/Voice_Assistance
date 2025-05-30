@@ -1,4 +1,4 @@
-# rpi-voice-assistant
+# Voice-Assistant
 A Raspberry Pi based voice assistant running logic on Voiceflow
 
 ![image](img/Rpi_assistant.jpg)
