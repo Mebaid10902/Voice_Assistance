@@ -1,8 +1,6 @@
 🗣️ Voice Assistant on Raspberry Pi
 A Raspberry Pi-based voice assistant powered by Voiceflow, running local audio input/output and cloud-based logic.
 
-
-
 🔧 Setup Instructions
 🧱 Hardware Requirements
 Raspberry Pi (or any Python3-compatible system)
