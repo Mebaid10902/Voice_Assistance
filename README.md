@@ -1,43 +1,51 @@
-# Voice-Assistant
-A Raspberry Pi based voice assistant running logic on Voiceflow
+🗣️ Voice Assistant on Raspberry Pi
+A Raspberry Pi-based voice assistant powered by Voiceflow, running local audio input/output and cloud-based logic.
 
-![image](img/Rpi_assistant.jpg)
 
-## Preparation
 
-### Hardware
-You must have a Python3-enabled system with audio input/output capability. 
-The audio capture device must be capable of capturing at 16Khz. 
+🔧 Setup Instructions
+🧱 Hardware Requirements
+Raspberry Pi (or any Python3-compatible system)
 
-### System dependencies
-This application requires the `PyAudio` package that has system dependencies: 
-```bash
-sudo apt-get install -y python3 python3-pip python3-all-dev python3-pyaudio portaudio19-dev libsndfile1 mpg123
-```
+Microphone & Speaker (or combined headset)
 
-### Python dependencies
-Python dependencies can be installed with the following command: 
-```bash
+Audio input must support 16kHz sample rate
+
+📦 System Dependencies
+Install essential system packages:
+
+bash
+Copy
+Edit
+sudo apt-get update
+sudo apt-get install -y \
+    python3 \
+    python3-pip \
+    python3-all-dev \
+    python3-pyaudio \
+    portaudio19-dev \
+    libsndfile1 \
+    mpg123
+🐍 Python Dependencies
+Install required Python libraries:
+
+bash
+Copy
+Edit
 pip3 install -r requirements.txt
-```
+🔐 Voiceflow API Configuration
+Set your Voiceflow API key as an environment variable:
 
-### GCP Account
-The RPI voice assistant requires Google Speech-to-text API access.  
-Make sure that your user/service account has the correct access permissions.  
-Setup instructions can be found on the [official guide](https://cloud.google.com/speech-to-text/docs/libraries).
+bash
+Copy
+Edit
+export VF_API_KEY=your_voiceflow_api_key
+📘 You can generate and manage your API key from the Voiceflow Developer Portal.
 
-### App configuration
-The Voiceflow API key must be specified as an environment variable `VF_API_KEY`. You can learn more about Voiceflow API keys and how to generate them [here](https://www.voiceflow.com/blog/voiceflow-api).  
+🚀 Running the Assistant
+Start the voice assistant with:
 
-To run the application, you must specify the following in the `config.yaml`: 
-| Parameter | Purpose |
-| --------- | ------- |
-| vf_DiagramID | The Voiceflow diagram ID of your target skill |
-| vf_VersionID | The Voiceflow runnable version ID of your target skill |
-| wakeword | A list of `porcupine`-supported wake word(s) that can be used to invoke the system |
-
-## Usage
-Run 
-```bash
+bash
+Copy
+Edit
 python3 ./src/main.py
-```
