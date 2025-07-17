@@ -27,24 +27,15 @@ sudo apt-get install -y \
     mpg123
 🐍 Python Dependencies
 Install required Python libraries:
-
 bash
-Copy
-Edit
 pip3 install -r requirements.txt
 🔐 Voiceflow API Configuration
 Set your Voiceflow API key as an environment variable:
-
 bash
-Copy
-Edit
 export VF_API_KEY=your_voiceflow_api_key
 📘 You can generate and manage your API key from the Voiceflow Developer Portal.
 
 🚀 Running the Assistant
 Start the voice assistant with:
-
 bash
-Copy
-Edit
 python3 ./src/main.py
